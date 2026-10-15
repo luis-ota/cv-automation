@@ -1,0 +1,92 @@
+% CV geral (Inglês) / ATS-friendly
+\input{cv-preamble}
+
+\hypersetup{pdftitle={Luis Otavio Silva Santos - Software Developer CV},pdfauthor={Luis Otavio Silva Santos}}
+
+\begin{document}
+
+\cvheader
+  {Software Developer | Backend \& Full-Stack, Rust Systems}
+  {Curitiba, Brazil • +55 41 99879-8238 • \href{mailto:luotasss@gmail.com}{luotasss@gmail.com}}
+  {\href{https://linkedin.com/in/luis-ota}{linkedin.com/in/luis-ota} • \href{https://github.com/luis-ota}{github.com/luis-ota} • \href{https://wired.rs}{wired.rs}}
+
+\cvsection{Professional Summary}
+Software Developer with production experience in Python REST APIs, systems integration, and SQL performance tuning. Strong open-source record in Rust: author of Swaptop (160+ GitHub stars, published on crates.io) and Clipsync, a multi-platform clipboard synchronization tool. Works with Next.js/React, PostgreSQL, Docker, and AI stacks (LLMs, RAG, tool-calling agents). B.S. in Software Engineering at PUCPR, graduating December 2026.
+
+\cvsection{Technical Skills}
+\skillline{Languages}{Python, Rust, TypeScript/JavaScript, C\#, SQL, Dart, PHP}
+\skillline{Backend \& APIs}{FastAPI, Flask, Django, Axum, Tokio, ASP.NET Core, Node.js, REST APIs, WebSockets, RabbitMQ}
+\skillline{Frontend \& Mobile}{React, Next.js, Angular, Tailwind CSS, Flutter, React Native, Streamlit}
+\skillline{Databases \& Data}{PostgreSQL, SQLite, MongoDB, Redis, Supabase, Firebase, Pandas, ETL pipelines, vector search}
+\skillline{Cloud \& DevOps}{Docker, Podman, GitHub Actions, Azure DevOps, Vercel, Cloudflare, Linux (Arch, Ubuntu), Bash, PowerShell}
+\skillline{AI Engineering}{LLMs, RAG, ReAct agents, tool calling, LlamaIndex, embeddings, prompt engineering}
+
+\cvsection{Professional Experience}
+
+\cventry{Amber Soluções de Tecnologia}{Curitiba, Brazil}{Software Developer}{Feb 2025 - Present}
+\begin{cvbullets}
+  \item Develop and maintain Python REST APIs that integrate internal systems with external platforms and partner systems.
+  \item Optimized SQL queries and critical legacy processes through profiling and query rewrites, reducing response times by up to 40\%.
+  \item Implement backend features end-to-end with Product and QA teams, focusing on reliability, test coverage, and technical documentation.
+  \item Fix critical bugs and refactor legacy code, improving maintainability and codebase readability.
+\end{cvbullets}
+
+\cventry{Wired Layer Co.}{Curitiba, Brazil}{Founder \& Developer}{2025 - Present}
+\begin{cvbullets}
+  \item Build and operate complete SaaS products in production: sign-up, Google login, onboarding, Pix and card billing, and ledger.
+  \item Manage the self-hosted infrastructure on my own VPSes (Docker Compose, Caddy, PostgreSQL, Redis, MinIO, CI/CD) with cloud-native practices for containers, automated deploys, and observability, powering products such as Vitrines, manifestacao.online, Peladafy, ai.ther, and Wired Leads.
+\end{cvbullets}
+
+\cventry{Serdia Eletrônica Industrial S.A.}{Curitiba, Brazil}{Research \& Development Intern}{Mar 2024 - Feb 2025}
+\begin{cvbullets}
+  \item Developed a technical ticketing system (Next.js, TypeScript, PostgreSQL, Docker, S3-compatible storage) with authentication, file attachments, and an interactive factory map.
+  \item Built a Raspberry Pi embedded system for electrostatic-safety testing with biometric identification, a Python UI, Flask APIs, and SQLite-to-PostgreSQL synchronization, replacing paper logs with fully traceable digital records.
+  \item Automated commercial spreadsheet processing with Python, Pandas, and Openpyxl, cutting a 3-day manual workflow to 1-2 minutes (99\%+ faster).
+  \item Created a Bluetooth test-automation tool with automatic label printing and API/database persistence.
+\end{cvbullets}
+
+\cventry{Equalize IT Solutions}{Curitiba, Brazil}{Technical Support Intern}{Apr 2023 - Feb 2024}
+\begin{cvbullets}
+  \item Provided L1/L2 support for Linux and Windows environments via VPN and SSH, tracking incidents within SLA.
+  \item Automated server maintenance tasks with Bash and PowerShell, reducing manual intervention time.
+\end{cvbullets}
+
+\cvsection{Selected Open-Source \& Product Projects}
+
+\projentry{Swaptop}{Rust, Tokio, Ratatui / Crossterm}{github.com/luis-ota/swaptop}
+\begin{cvbullets}
+  \item 160+ GitHub stars and published on crates.io; distributed as a static binary with Windows support and CI release automation.
+  \item Reads Linux swap and memory-pressure data from /proc via procfs; live graphs, per-process swap breakdown, and under 5~MB memory usage.
+\end{cvbullets}
+
+\projentry{Clipsync}{Rust, Tokio, WebSockets, mDNS}{github.com/luis-ota/clipsync}
+\begin{cvbullets}
+  \item Cross-device clipboard synchronization for Linux (Wayland/X11), Android, macOS, and Windows over the LAN, with mDNS discovery, PIN pairing, and a self-hosted relay.
+  \item Split socket I/O into Tokio tasks with bounded per-peer queues; shared broadcast payloads via Arc and added regression tests for reconnection and persistence.
+\end{cvbullets}
+
+\projentry{SmartSec}{Rust, LLM integration, Podman}{github.com/luis-ota/smartsec-rust}
+\begin{cvbullets}
+  \item Software Engineering capstone: security-analysis platform with a Ratatui TUI and headless mode, LLM-assisted finding analysis, and real Nmap/Nuclei execution inside rootless Podman containers.
+  \item Captures stdout/stderr concurrently through Tokio subprocesses, enforcing execution timeouts, memory/CPU/PID limits, and read-only filesystems.
+\end{cvbullets}
+
+\projentry{SongHunter}{Rust, Axum, Tokio, SQLx, Docker}{songhunter.wired.rs}
+\begin{cvbullets}
+  \item Identifies the music playing in any video link (TikTok, YouTube, Instagram, and 1,400+ sites) by aggregating Shazam, AcoustID, and ACRCloud identifications in parallel, with yt-dlp/FFmpeg audio extraction and SQLite caching.
+\end{cvbullets}
+
+\projentry{Intelligent Data Analysis (UFPR Hackathon 2025)}{RAG, agents, Streamlit}{github.com/luis-ota/hackathon-ufpr-dados-2025}
+\begin{cvbullets}
+  \item Built a hybrid RAG and data-analysis agent (Streamlit, Gemini 2.5, LlamaIndex) with tool calling, embedding-based semantic search, and vector indexing for PDFs, CSVs, and spreadsheets.
+\end{cvbullets}
+
+\cvsection{Education}
+\cventry{Pontifical Catholic University of Paraná (PUCPR)}{Curitiba, Brazil}{B.S. in Software Engineering}{Mar 2023 - Dec 2026 (expected)}
+Relevant coursework: Operating Systems, Computer Networks, Data Structures, Databases, Embedded Systems, AI Fundamentals.
+
+\cvsection{Certifications \& Languages}
+\skillline{Certifications}{Software Architect (PUCPR); Systems Analyst (PUCPR); Requirements Analyst (PUCPR); Web Developer (PUCPR); The Complete Python 3 Course: Beginner to Advanced (Udemy, 2021); Computer Operator \& Maintenance (SPAE, 2019)}
+\skillline{Languages}{Portuguese (native); English (professional working, B2); German (basic)}
+
+\end{document}

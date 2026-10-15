@@ -1,0 +1,89 @@
+% ============================================================
+%  CV de Luís Otávio Silva Santos / Template ATS-friendly
+%  Regras seguidas: coluna única, sem tabelas/listas de layout
+%  crítico, contato no corpo, fonte Arial, bullets simples,
+%  datas em formato consistente, texto selecionável.
+%  Compilar com: tectonic -X compile <arquivo>.tex
+% ============================================================
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{fontspec}
+% HyphenChar=None desativa a hifenização (XeTeX). Palavras técnicas
+% nunca são quebradas no meio (melhor para ATS e para leitura).
+\setmainfont{Arial}[HyphenChar=None]
+
+\usepackage[a4paper,left=1.6cm,right=1.6cm,top=1.4cm,bottom=1.4cm]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[none]{hyphenat}
+
+% Hifenização desativada: palavras nunca são quebradas no meio
+% (importante para parsing de ATS e para legibilidade do texto).
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\sloppy
+
+\definecolor{linknavy}{HTML}{14406B}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linknavy,
+  linkcolor=linknavy,
+  pdfborder={0 0 0},
+  pdfcreator={Tectonic},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
+
+% ---- Cabeçalho de contato (no corpo, não em header/footer) ----
+\newcommand{\cvheader}[3]{%
+  % #1 título profissional  #2 linha de contato  #3 linha de links
+  \begin{center}%
+    {\LARGE\bfseries Luís Otávio Silva Santos}\\[2pt]
+    {\normalsize #1}\\[3pt]
+    {\small #2}\\[1pt]
+    {\small #3}%
+  \end{center}%
+  \vspace{2pt}%
+}
+
+% ---- Seção (heading padrão, texto real) ----
+\newcommand{\cvsection}[1]{%
+  \begingroup
+  \setlength{\parskip}{0pt}%
+  \vspace{6pt}%
+  {\normalsize\bfseries\MakeUppercase{#1}}\par
+  \vspace{1.5pt}%
+  \noindent\rule{\textwidth}{0.8pt}\par
+  \endgroup
+  \vspace{2pt}%
+}
+
+% ---- Experiência / formação: empregador, local, cargo, período ----
+\newcommand{\cventry}[4]{%
+  \vspace{3pt}%
+  {\bfseries #1} \hfill #2\\*[1pt]
+  {#3} \hfill {#4}\par
+}
+
+% ---- Projeto: nome + stack/stack-line + link opcional ----
+\newcommand{\projentry}[3]{%
+  % #1 nome   #2 stack   #3 link (texto exibido; vazio omite)
+  \vspace{3pt}%
+  {\bfseries #1}: {\itshape #2}%
+  \ifx\relax#3\relax\else\hfill {\small\href{https://#3}{#3}}\fi
+}
+
+% ---- Bullets padronizados ----
+\newenvironment{cvbullets}{%
+  \begin{itemize}[leftmargin=1.15em,topsep=1.5pt,itemsep=1.1pt,parsep=0pt,partopsep=0pt,label=\textbullet]%
+}{\end{itemize}}
+
+% ---- Linha de competência (Skill: itens) ----
+\newcommand{\skillline}[2]{%
+  {\bfseries #1:} #2\par
+}

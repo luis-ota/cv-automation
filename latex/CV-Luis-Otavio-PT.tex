@@ -1,0 +1,92 @@
+% CV geral (Português BR) / ATS-friendly
+\input{cv-preamble}
+
+\hypersetup{pdftitle={Luis Otavio Silva Santos - Curriculo Desenvolvedor de Software},pdfauthor={Luis Otavio Silva Santos}}
+
+\begin{document}
+
+\cvheader
+  {Desenvolvedor de Software | Backend, Full-Stack e Sistemas em Rust}
+  {Curitiba, PR • (41) 9 9879-8238 • \href{mailto:luotasss@gmail.com}{luotasss@gmail.com}}
+  {\href{https://linkedin.com/in/luis-ota}{linkedin.com/in/luis-ota} • \href{https://github.com/luis-ota}{github.com/luis-ota} • \href{https://wired.rs}{wired.rs}}
+
+\cvsection{Resumo Profissional}
+Desenvolvedor de Software com experiência em produção no desenvolvimento de APIs REST em Python, integração de sistemas e otimização de consultas SQL. Autor de projetos open-source em Rust com destaque: Swaptop (mais de 160 estrelas no GitHub, publicado no crates.io) e Clipsync, ferramenta multiplataforma de sincronização de área de transferência. Atua com Next.js/React, PostgreSQL, Docker e soluções de IA (LLMs, RAG e agentes com Tool Calling). Estudante de Engenharia de Software na PUCPR, com conclusão prevista para dezembro de 2026.
+
+\cvsection{Habilidades Técnicas}
+\skillline{Linguagens}{Python, Rust, TypeScript/JavaScript, C\#, SQL, Dart, PHP}
+\skillline{Backend e APIs}{FastAPI, Flask, Django, Axum, Tokio, ASP.NET Core, Node.js, APIs REST, WebSockets, RabbitMQ}
+\skillline{Frontend e Mobile}{React, Next.js, Angular, Tailwind CSS, Flutter, React Native, Streamlit}
+\skillline{Bancos de Dados}{PostgreSQL, SQLite, MongoDB, Redis, Supabase, Firebase, Pandas, pipelines ETL, busca vetorial}
+\skillline{Cloud e DevOps}{Docker, Podman, GitHub Actions, Azure DevOps, Vercel, Cloudflare, Linux (Arch, Ubuntu), Bash, PowerShell}
+\skillline{Inteligência Artificial}{LLMs, RAG, agentes ReAct, Tool Calling, LlamaIndex, embeddings, engenharia de prompts}
+
+\cvsection{Experiência Profissional}
+
+\cventry{Amber Soluções de Tecnologia}{Curitiba, PR}{Desenvolvedor de Software}{Fev 2025 - Atual}
+\begin{cvbullets}
+  \item Desenvolve e mantém APIs REST em Python que integram sistemas internos a plataformas externas e sistemas de parceiros.
+  \item Otimizou consultas SQL e processos críticos de sistemas legados por meio de profiling e reescrita de queries, reduzindo o tempo de resposta em até 40\%.
+  \item Implementa funcionalidades de backend de ponta a ponta junto a Produto e QA, com foco em confiabilidade, cobertura de testes e documentação técnica.
+  \item Corrige bugs críticos e refatora código legado, melhorando a manutenibilidade e a legibilidade da base de código.
+\end{cvbullets}
+
+\cventry{Wired Layer Co.}{Curitiba, PR}{Fundador e Desenvolvedor}{2025 - Atual}
+\begin{cvbullets}
+  \item Desenvolvo e opero produtos SaaS completos em produção: cadastro, login com Google, onboarding, cobrança via Pix e cartão, e ledger.
+  \item Gerencio a infraestrutura self-hosted em VPSes próprias (Docker Compose, Caddy, PostgreSQL, Redis, MinIO e CI/CD) com práticas cloud-native de containers, deploy automatizado e observabilidade, para produtos como Vitrines, manifestacao.online, Peladafy, ai.ther e Wired Leads.
+\end{cvbullets}
+
+\cventry{Serdia Eletrônica Industrial S.A.}{Curitiba, PR}{Estagiário de Pesquisa e Desenvolvimento}{Mar 2024 - Fev 2025}
+\begin{cvbullets}
+  \item Desenvolveu sistema web de chamados técnicos (Next.js, TypeScript, PostgreSQL, Docker e armazenamento compatível com S3) com autenticação, anexos e mapa interativo da fábrica.
+  \item Criou sistema embarcado em Raspberry Pi para testes eletrostáticos com identificação biométrica, interface em Python, APIs Flask e sincronização SQLite para PostgreSQL, substituindo registros em papel por dados digitais com rastreabilidade total.
+  \item Automatizou o preenchimento de planilhas comerciais com Python, Pandas e Openpyxl, reduzindo um processo de três dias para 1-2 minutos (mais de 99\% de ganho de eficiência).
+  \item Desenvolveu automação de testes sequenciais via Bluetooth, com impressão automática de etiquetas e persistência de dados por API e banco de dados.
+\end{cvbullets}
+
+\cventry{Equalize IT Solutions}{Curitiba, PR}{Estagiário de Suporte Técnico}{Abr 2023 - Fev 2024}
+\begin{cvbullets}
+  \item Prestou suporte L1/L2 em ambientes Linux e Windows via VPN e SSH, com registro e acompanhamento de incidentes dentro do SLA.
+  \item Automatizou tarefas de manutenção de servidores com Bash e PowerShell, reduzindo o tempo de intervenção manual.
+\end{cvbullets}
+
+\cvsection{Projetos Open-Source e Produtos}
+
+\projentry{Swaptop}{Rust, Tokio, Ratatui / Crossterm}{github.com/luis-ota/swaptop}
+\begin{cvbullets}
+  \item Mais de 160 estrelas no GitHub e publicado no crates.io; distribuído como binário estático com suporte a Windows e releases automatizadas via CI.
+  \item Monitora swap e pressão de memória a partir do /proc via procfs; exibe gráficos ao vivo, consumo por processo e usa menos de 5~MB de memória.
+\end{cvbullets}
+
+\projentry{Clipsync}{Rust, Tokio, WebSockets, mDNS}{github.com/luis-ota/clipsync}
+\begin{cvbullets}
+  \item Sincronização de área de transferência entre Linux (Wayland/X11), Android, macOS e Windows na rede local, com descoberta mDNS, pareamento por PIN e relay auto-hospedado.
+  \item Separou leitura e escrita de sockets em tarefas Tokio com filas limitadas por par; compartilhou payloads via Arc e adicionou testes de regressão para reconexão e persistência.
+\end{cvbullets}
+
+\projentry{SmartSec}{Rust, integração com LLM, Podman}{github.com/luis-ota/smartsec-rust}
+\begin{cvbullets}
+  \item Trabalho de conclusão de curso: plataforma de análise de segurança com TUI em Ratatui e modo headless, análise de achados assistida por LLM e execução real de Nmap/Nuclei em contêineres Podman rootless.
+  \item Captura stdout/stderr de forma concorrente com subprocessos Tokio, aplicando timeouts de execução, limites de memória/CPU/PID e sistemas de arquivos somente leitura.
+\end{cvbullets}
+
+\projentry{SongHunter}{Rust, Axum, Tokio, SQLx, Docker}{songhunter.wired.rs}
+\begin{cvbullets}
+  \item Identifica músicas em qualquer vídeo por link (TikTok, YouTube, Instagram e mais de 1.400 sites) agregando resultados de Shazam, AcoustID e ACRCloud em paralelo, com extração de áudio via yt-dlp/FFmpeg e cache em SQLite.
+\end{cvbullets}
+
+\projentry{Análise Inteligente de Dados (Hackathon UFPR 2025)}{RAG, agentes, Streamlit}{github.com/luis-ota/hackathon-ufpr-dados-2025}
+\begin{cvbullets}
+  \item Agente híbrido de RAG e análise de dados (Streamlit, Gemini 2.5, LlamaIndex) com Tool Calling, busca semântica por embeddings e indexação vetorial de PDFs, CSVs e planilhas.
+\end{cvbullets}
+
+\cvsection{Formação Acadêmica}
+\cventry{Pontifícia Universidade Católica do Paraná (PUCPR)}{Curitiba, PR}{Bacharelado em Engenharia de Software}{Mar 2023 - Dez 2026 (previsão)}
+Disciplinas relevantes: Sistemas Operacionais, Redes de Computadores, Estrutura de Dados, Banco de Dados, Sistemas Embarcados, Fundamentos de IA.
+
+\cvsection{Certificações e Idiomas}
+\skillline{Certificações}{Arquiteto de Software (PUCPR); Analista de Sistemas (PUCPR); Analista de Requisitos (PUCPR); Desenvolvedor Web (PUCPR); Curso Completo de Python 3: do Iniciante ao Avançado (Udemy, 2021); Operador e Manutenção de Computadores (SPAE, 2019)}
+\skillline{Idiomas}{Português (nativo); Inglês (intermediário, B2); Alemão (básico)}
+
+\end{document}

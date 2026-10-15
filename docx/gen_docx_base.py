@@ -183,18 +183,18 @@ def header(doc, headline, lang="pt"):
 
 EXP_PT = [
     ("Amber Soluções de Tecnologia", "Desenvolvedor de Software", "Fev 2025 - Atual", "Curitiba, PR", [
-        "Desenvolvi e mantive APIs REST em Python para integração com plataformas externas e sistemas de parceiros.",
-        "Implementei novas funcionalidades de backend seguindo requisitos de negócio, com foco em confiabilidade e cobertura de testes.",
+        "Desenvolvo e mantenho APIs REST em Python para integração com plataformas externas e sistemas de parceiros.",
+        "Implemento novas funcionalidades de backend seguindo requisitos de negócio, com foco em confiabilidade e cobertura de testes.",
         "Otimizei a performance de sistemas legados via profiling e reescrita de consultas SQL, reduzindo o tempo de resposta em até 40%.",
-        "Corrigi bugs críticos e refatorei código, melhorando a organização e a legibilidade da base de código.",
-        "Colaborei com equipes de QA e Produto para garantir a confiabilidade dos recursos e a documentação técnica adequada.",
+        "Corrijo bugs críticos e refatoro código, melhorando a organização e a legibilidade da base de código.",
+        "Colaboro com equipes de QA e Produto para garantir a confiabilidade dos recursos e a documentação técnica adequada.",
     ]),
     ("Wired Layer Co.", "Fundador e Desenvolvedor", "2025 - Atual", "Curitiba, PR", [
-        "Desenvolvo e opero produtos SaaS completos em produção: cadastro, login com Google, onboarding, cobrança via Pix e cartão, e ledger.",
-        "Gerencio a infraestrutura self-hosted em VPSes próprias (Docker Compose, Caddy, PostgreSQL, Redis, MinIO e CI/CD) com práticas cloud-native de containers, deploy automatizado e observabilidade, para produtos como Vitrines, manifestacao.online, Peladafy, ai.ther e Wired Leads.",
+        "Desenvolvo e opero produtos SaaS completos em produção: cadastro, login com Google, onboarding, cobrança via Pix e cartão e ledger de pagamentos.",
+        "Gerencio a infraestrutura self-hosted em VPSes próprias (Docker Compose, Caddy, PostgreSQL, Redis, MinIO e CI/CD) com práticas cloud-native de containers, deploy automatizado e observabilidade, para produtos como Vitrines, manifestacao.online, ai.ther e Wired Leads.",
     ]),
     ("Serdia Eletrônica Industrial S.A.", "Estagiário de Pesquisa e Desenvolvimento", "Mar 2024 - Fev 2025", "Curitiba, PR", [
-        "Desenvolvi sistema embarcado em Raspberry Pi para testes eletrostáticos com identificação biométrica digital, com rastreabilidade completa dos resultados.",
+        "Desenvolvi um sistema embarcado em Raspberry Pi para testes eletrostáticos, com identificação biométrica digital e rastreabilidade completa dos resultados.",
         "Implementei sincronização de dados entre SQLite local (camada de cache) e PostgreSQL centralizado, com API Flask para atualizações em tempo real e arquivamento automático de logs.",
         "Projetei sistema de chamados técnicos da produção com Next.js, TypeScript, PostgreSQL e Docker, incluindo cronômetro, gerenciamento de usuários e mapa interativo.",
         "Automatizei o preenchimento de planilhas comerciais com Python, Pandas e Openpyxl, reduzindo o processo de 3 dias para 1-2 minutos (mais de 99% de ganho).",
@@ -209,15 +209,15 @@ EXP_PT = [
 
 EXP_EN = [
     ("Amber Soluções de Tecnologia", "Software Developer", "Feb 2025 - Present", "Curitiba, Brazil", [
-        "Developed and maintained RESTful APIs in Python for integration with external platforms and partner systems.",
-        "Implemented new backend features following business requirements, focusing on reliability and test coverage.",
+        "Develop and maintain RESTful APIs in Python for integration with external platforms and partner systems.",
+        "Implement new backend features following business requirements, focusing on reliability and test coverage.",
         "Optimized legacy system performance through profiling and rewriting slow SQL queries, reducing response time by up to 40%.",
-        "Fixed critical bugs and refactored code, improving codebase organization and readability.",
-        "Collaborated with QA and Product teams to ensure feature reliability and proper technical documentation.",
+        "Fix critical bugs and refactor code, improving codebase organization and readability.",
+        "Collaborate with QA and Product teams to ensure feature reliability and proper technical documentation.",
     ]),
     ("Wired Layer Co.", "Founder and Developer", "2025 - Present", "Curitiba, Brazil", [
-        "Build and operate complete SaaS products in production: sign-up, Google login, onboarding, Pix and card billing, and ledger.",
-        "Manage the self-hosted infrastructure on my own VPSes (Docker Compose, Caddy, PostgreSQL, Redis, MinIO, CI/CD) with cloud-native practices for containers, automated deploys, and observability, powering products such as Vitrines, manifestacao.online, Peladafy, ai.ther and Wired Leads.",
+        "Build and operate complete SaaS products in production: sign-up, Google login, onboarding, Pix and card billing, and payment ledger.",
+        "Manage the self-hosted infrastructure on my own VPSes (Docker Compose, Caddy, PostgreSQL, Redis, MinIO, CI/CD) with cloud-native practices for containers, automated deploys, and observability, powering products such as Vitrines, manifestacao.online, ai.ther and Wired Leads.",
     ]),
     ("Serdia Eletrônica Industrial S.A.", "Research and Development Intern", "Mar 2024 - Feb 2025", "Curitiba, Brazil", [
         "Developed an embedded system on Raspberry Pi for electrostatic testing with digital biometric identification and full result traceability.",

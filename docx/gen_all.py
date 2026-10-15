@@ -14,25 +14,18 @@ OUT = ROOT / "output"
 # 1) C# BACKEND
 # =============================================================================
 sum_cs_pt = ("Desenvolvedor Backend C# com experiência em ASP.NET Core e Entity Framework Core. "
-             "Conhecimento em microsserviços com RabbitMQ, MongoDB e PostgreSQL. Vivência com .NET 8, "
-             "idempotência, outbox pattern e observabilidade (OpenTelemetry) em produto financeiro. "
+             "Conhecimento em microsserviços com RabbitMQ, MongoDB e PostgreSQL. "
              "Experiência também em Python, Rust e TypeScript. Estudante de Engenharia de Software "
              "pela PUCPR, com conclusão prevista para dezembro de 2026.")
 sum_cs_en = ("C# Backend Developer experienced in ASP.NET Core and Entity Framework Core. Knowledge of "
-             "microservices with RabbitMQ, MongoDB and PostgreSQL. Hands-on with .NET 8, idempotency, "
-             "outbox pattern and observability (OpenTelemetry) in a financial product. Also experienced "
-             "in Python, Rust and TypeScript. Software Engineering student at PUCPR, expected graduation "
-             "December 2026.")
+             "microservices with RabbitMQ, MongoDB and PostgreSQL. Also experienced in Python, Rust and "
+             "TypeScript. Software Engineering student at PUCPR, expected graduation December 2026.")
 
 proj_cs_pt = [
     ("Medica.ly", "Projeto Universitário - PUCPR", None, None, [
         "Aplicação web para agendamento de consultas médicas com ASP.NET Core, C# e PostgreSQL.",
         "Frontend em Angular 12 com Angular Material e design responsivo; CRUD completo e autenticação de usuários.",
         "Containerização com Docker e autenticação com Supabase Auth."]),
-    ("Pix Bridge", "Backend .NET 8", None, None, [
-        "API backend para produto de pagamentos Pix: ordens de depósito, watcher on-chain e payout Pix integrados a parceiro licenciado.",
-        "ASP.NET Core (.NET 8) com PostgreSQL e EF Core, idempotência estrutural por restrição unique e ledger imutável com outbox pattern.",
-        "Observabilidade com OpenTelemetry e Sentry; deploy containerizado."]),
     ("Sistema EPI Biométrico", "Serdia", None, None, [
         "Sistema embarcado em Raspberry Pi com autenticação biométrica (sensor UART + Python) para validação de segurança eletrostática antes do acesso às linhas de produção.",
         "Sincronização SQLite/PostgreSQL e API REST para monitoramento em tempo real, eliminando registros em papel."]),
@@ -46,10 +39,6 @@ proj_cs_en = [
         "Web application for medical appointment scheduling built with ASP.NET Core, C# and PostgreSQL.",
         "Angular 12 frontend with Angular Material and responsive design; full CRUD and user authentication.",
         "Docker containerization and Supabase Auth integration."]),
-    ("Pix Bridge", ".NET 8 Backend", None, None, [
-        "Backend API for a Pix payments product: deposit orders, on-chain watcher and Pix payouts integrated with a licensed partner.",
-        "ASP.NET Core (.NET 8) with PostgreSQL and EF Core, structural idempotency via unique constraints and an immutable ledger with the outbox pattern.",
-        "Observability with OpenTelemetry and Sentry; containerized deployment."]),
     ("Biometric PPE System", "Serdia", None, None, [
         "Raspberry Pi embedded system with biometric authentication (UART sensor + Python) to validate electrostatic safety before access to production lines.",
         "SQLite/PostgreSQL synchronization and REST API for real-time monitoring, replacing paper logs."]),
@@ -150,20 +139,18 @@ skills_data_en = [
 # =============================================================================
 sum_fl_pt = ("Desenvolvedor Mobile com experiência em Flutter (Dart) e React Native/Expo. Projetos "
              "publicados com integração Firebase, notificações push, builds distribuídos e pagamentos via "
-             "Pix. Background em backend Python. Estudante de Engenharia de Software pela PUCPR, com "
-             "conclusão prevista para dezembro de 2026.")
+             "Pix. Vivência com backend Python (Flask, FastAPI). Estudante de Engenharia de Software pela "
+             "PUCPR, com conclusão prevista para dezembro de 2026.")
 sum_fl_en = ("Mobile Developer experienced in Flutter (Dart) and React Native/Expo. Published projects with "
-             "Firebase integration, push notifications, distributed builds and Pix payments. Background in "
-             "Python backend. Software Engineering student at PUCPR, expected graduation December 2026.")
+             "Firebase integration, push notifications, distributed builds and Pix payments. Hands-on with "
+             "Python backend (Flask, FastAPI). Software Engineering student at PUCPR, expected graduation "
+             "December 2026.")
 
 proj_fl_pt = [
     ("App de Gestão de Fretes (Flutter)", "Flutter, Firebase", "github.com/luis-ota/AppTransportadora",
      GH + "AppTransportadora", [
         "Aplicativo móvel multiplataforma para empresa de transportes: rastreamento de remessas, gestão de entregas e notificações push.",
         "Integração com Firebase Auth e Firestore; builds distribuídos via tags Git."]),
-    ("Peladafy", "Expo / React Native, Pix", None, None, [
-        "Aplicativo para reservas de quadras de futebol e futsal: agenda sem conflitos, criação de partidas, convites, vagas e pagamentos Pix por organizador ou jogador.",
-        "Modo demo sem credenciais externas para apresentação a quadras piloto; painel da arena com saques, taxas e histórico."]),
     ("Vitrines", "Expo / React Native", None, None, [
         "App mobile de vitrine de produtos digitais para criadores venderem pelo link da bio, compartilhando validação e tipos com o app web via monorepo."]),
 ]
@@ -172,9 +159,6 @@ proj_fl_en = [
      GH + "AppTransportadora", [
         "Cross-platform mobile app for a transport company: shipment tracking, delivery management and push notifications.",
         "Firebase Auth and Firestore integration; builds distributed via Git tags."]),
-    ("Peladafy", "Expo / React Native, Pix", None, None, [
-        "App for booking football and futsal courts: conflict-free scheduling, match creation, invites, open slots and Pix payments by organizer or player.",
-        "Demo mode without external credentials for presenting to pilot courts; arena dashboard with payouts, fees and history."]),
     ("Vitrines", "Expo / React Native", None, None, [
         "Mobile app for a creator storefront selling digital products via bio link, sharing validation and types with the web app through a monorepo."]),
 ]
@@ -219,12 +203,9 @@ sum_fs_en = ("Full-Stack Developer working with Python/Rust backends and React/N
              "December 2026.")
 
 proj_fs_pt = [
-    ("Precify", "Rust (Axum) + Next.js, PostgreSQL, Redis, MinIO", None, None, [
-        "Backend em Rust (Axum, SeaORM/SQLx, PostgreSQL, Redis, MinIO) para gestão de orçamentos e produtos, com precificação snapshot, fluxo Kanban e compartilhamento público via Magic Link.",
-        "Frontend em Next.js 16 e React 19 com Tailwind CSS e PWA; documentação de API com Swagger e ambiente completo em Docker Compose."]),
     ("Vitrines", "Next.js + Expo, pagamentos Pix", None, None, [
         "SaaS para criadores transformarem o link da bio em vitrine de produtos digitais: monorepo Bun com Next.js e app Expo.",
-        "Autenticação por organizações, cobrança por assinatura e cartão, Pix com ledger de criadores e payouts, jobs em background (Inngest), i18n e deploy em VPS única com Docker Compose e Caddy."]),
+        "Autenticação por organizações, cobrança por assinatura e cartão, Pix com ledger de criadores e payouts, jobs em background (Inngest), i18n e deploy self-hosted com Docker Compose e Caddy."]),
     ("ai.ther", "Open-source (AGPL), produto operado", None, None, [
         "Plataforma open-source de agendamento e publicação em redes sociais com copiloto de IA, publicação nativa em 12 redes e servidor MCP para assistentes de IA.",
         "Opero a instância em produção, incluindo autenticação social, conexão de contas e o fluxo completo de publicação."]),
@@ -235,12 +216,9 @@ proj_fs_pt = [
         "Aplicação full stack para gestão de consultas médicas: APIs REST em ASP.NET Core, autenticação com Supabase Auth e modelagem PostgreSQL; interface responsiva em Angular Material."]),
 ]
 proj_fs_en = [
-    ("Precify", "Rust (Axum) + Next.js, PostgreSQL, Redis, MinIO", None, None, [
-        "Rust backend (Axum, SeaORM/SQLx, PostgreSQL, Redis, MinIO) for quotes and product management, with snapshot pricing, a Kanban flow and public sharing via Magic Link.",
-        "Next.js 16 and React 19 frontend with Tailwind CSS and PWA; Swagger API docs and a full Docker Compose environment."]),
     ("Vitrines", "Next.js + Expo, Pix payments", None, None, [
         "SaaS that turns a creator's bio link into a digital-product storefront: Bun monorepo with Next.js and an Expo app.",
-        "Organization-based auth, subscription and card billing, Pix with creator ledger and payouts, background jobs (Inngest), i18n and single-VPS deployment with Docker Compose and Caddy."]),
+        "Organization-based auth, subscription and card billing, Pix with creator ledger and payouts, background jobs (Inngest), i18n and self-hosted deployment with Docker Compose and Caddy."]),
     ("ai.ther", "Open-source (AGPL), operated product", None, None, [
         "Open-source social media scheduling platform with an AI copilot, native publishing to 12 networks and an MCP server for AI assistants.",
         "Operate the production instance, including social auth, account connections and the complete publishing pipeline."]),
@@ -280,12 +258,12 @@ skills_fs_en = [
 # 5) JAVA BACKEND
 # =============================================================================
 sum_java_pt = ("Desenvolvedor Backend com experiência em Java, Spring Boot e integração de sistemas. "
-               "Conhecimento em microsserviços com RabbitMQ, MongoDB e PostgreSQL. Background sólido em "
-               "Python para backend e automação e em Rust para sistemas. Estudante de Engenharia de "
-               "Software pela PUCPR, com conclusão prevista para dezembro de 2026.")
+               "Conhecimento em microsserviços com RabbitMQ, MongoDB e PostgreSQL. Experiência também com "
+               "Python (backend e automação) e Rust (sistemas). Estudante de Engenharia de Software pela "
+               "PUCPR, com conclusão prevista para dezembro de 2026.")
 sum_java_en = ("Backend Developer experienced in Java, Spring Boot and systems integration. Knowledge of "
-               "microservices with RabbitMQ, MongoDB and PostgreSQL. Solid background in Python for backend "
-               "and automation, and in Rust for systems. Software Engineering student at PUCPR, expected "
+               "microservices with RabbitMQ, MongoDB and PostgreSQL. Also experienced with Python (backend "
+               "and automation) and Rust (systems). Software Engineering student at PUCPR, expected "
                "graduation December 2026.")
 
 proj_java_pt = [
@@ -347,9 +325,6 @@ sum_py_en = ("Python Backend Developer with hands-on experience in RESTful APIs,
              "December 2026.")
 
 proj_py_pt = [
-    ("Zebot", "Python, IA, OBS WebSocket", None, None, [
-        "Jogo social ao vivo para TikTok LIVE em que o público controla um personagem por gifts e interações do chat.",
-        "Python 3.12, SQLite e OBS WebSocket; as regras determinísticas cuidam das interações críticas e a IA cuida de voz e narrativa, mantendo a transmissão estável."]),
     ("Análise Inteligente de Dados", "Hackathon UFPR 2025", "github.com/luis-ota/hackathon-ufpr-dados-2025",
      GH + "hackathon-ufpr-dados-2025", [
         "Agente ReAct com Tool Calling para análise de dados e busca semântica; RAG com embeddings e indexação vetorial de PDFs, CSVs e planilhas; dashboards em Streamlit."]),
@@ -358,9 +333,6 @@ proj_py_pt = [
         "Começou como bot de Telegram e evoluiu para SaaS completo com interface web FastAPI, autenticação e deploy contínuo em produção."]),
 ]
 proj_py_en = [
-    ("Zebot", "Python, AI, OBS WebSocket", None, None, [
-        "Live social game for TikTok LIVE where the audience controls a character through gifts and chat interactions.",
-        "Python 3.12, SQLite and OBS WebSocket; deterministic rules handle critical interactions while AI handles voice and narrative, keeping the stream stable."]),
     ("Intelligent Data Analysis", "UFPR Hackathon 2025", "github.com/luis-ota/hackathon-ufpr-dados-2025",
      GH + "hackathon-ufpr-dados-2025", [
         "ReAct agent with Tool Calling for data analysis and semantic search; RAG with embeddings and vector indexing of PDFs, CSVs and spreadsheets; Streamlit dashboards."]),

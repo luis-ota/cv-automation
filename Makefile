@@ -27,7 +27,7 @@ docx:
 
 latex:
 	mkdir -p $(OUTPUT)/latex
-	for f in latex/CV-*.tex; do $(TECTONIC) -X compile --outdir $(OUTPUT)/latex "$$f"; done
+	for f in latex/PT-*.tex latex/EN-*.tex; do $(TECTONIC) -X compile --outdir $(OUTPUT)/latex "$$f"; done
 
 pdf: docx
 	$(SOFFICE) --headless --convert-to pdf --outdir $(OUTPUT)/ptbr $(OUTPUT)/ptbr/*.docx

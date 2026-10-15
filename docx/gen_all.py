@@ -430,20 +430,20 @@ skills_re_en = [
 # Geração
 # =============================================================================
 JOBS = [
-    ("ptbr/curriculo_Luis_Otavio_CSharp_Backend", "pt", "Desenvolvedor Backend C#", sum_cs_pt, proj_cs_pt, skills_cs_pt),
-    ("ptbr/curriculo_Luis_Otavio_Data_Developer", "pt", "Desenvolvedor de Dados", sum_data_pt, proj_data_pt, skills_data_pt),
-    ("ptbr/curriculo_Luis_Otavio_Flutter_Mobile", "pt", "Desenvolvedor Mobile", sum_fl_pt, proj_fl_pt, skills_fl_pt),
-    ("ptbr/curriculo_Luis_Otavio_FullStack", "pt", "Desenvolvedor Full Stack", sum_fs_pt, proj_fs_pt, skills_fs_pt),
-    ("ptbr/curriculo_Luis_Otavio_Java_Backend", "pt", "Desenvolvedor Backend Java", sum_java_pt, proj_java_pt, skills_java_pt),
-    ("ptbr/curriculo_Luis_Otavio_Python_Backend", "pt", "Desenvolvedor Backend Python", sum_py_pt, proj_py_pt, skills_py_pt),
-    ("ptbr/curriculo_Luis_Otavio_React_Frontend", "pt", "Desenvolvedor Frontend React", sum_re_pt, proj_re_pt, skills_re_pt),
-    ("ingles/Luis_Otavio_CSharp_Backend", "en", "C# Backend Developer", sum_cs_en, proj_cs_en, skills_cs_en),
-    ("ingles/Luis_Otavio_Data_Developer", "en", "Data Developer", sum_data_en, proj_data_en, skills_data_en),
-    ("ingles/Luis_Otavio_Flutter_Mobile", "en", "Mobile Developer", sum_fl_en, proj_fl_en, skills_fl_en),
-    ("ingles/Luis_Otavio_FullStack", "en", "Full-Stack Developer", sum_fs_en, proj_fs_en, skills_fs_en),
-    ("ingles/Luis_Otavio_Java_Backend", "en", "Java Backend Developer", sum_java_en, proj_java_en, skills_java_en),
-    ("ingles/Luis_Otavio_Python_Backend", "en", "Python Backend Developer", sum_py_en, proj_py_en, skills_py_en),
-    ("ingles/Luis_Otavio_React_Frontend", "en", "React Frontend Developer", sum_re_en, proj_re_en, skills_re_en),
+    ("ptbr/PT-CSharp-Backend-Luis-Otavio", "pt", "Desenvolvedor Backend C#", sum_cs_pt, proj_cs_pt, skills_cs_pt),
+    ("ptbr/PT-Data-Developer-Luis-Otavio", "pt", "Desenvolvedor de Dados", sum_data_pt, proj_data_pt, skills_data_pt),
+    ("ptbr/PT-Flutter-Mobile-Luis-Otavio", "pt", "Desenvolvedor Mobile", sum_fl_pt, proj_fl_pt, skills_fl_pt),
+    ("ptbr/PT-FullStack-Luis-Otavio", "pt", "Desenvolvedor Full Stack", sum_fs_pt, proj_fs_pt, skills_fs_pt),
+    ("ptbr/PT-Java-Backend-Luis-Otavio", "pt", "Desenvolvedor Backend Java", sum_java_pt, proj_java_pt, skills_java_pt),
+    ("ptbr/PT-Python-Backend-Luis-Otavio", "pt", "Desenvolvedor Backend Python", sum_py_pt, proj_py_pt, skills_py_pt),
+    ("ptbr/PT-React-Frontend-Luis-Otavio", "pt", "Desenvolvedor Frontend React", sum_re_pt, proj_re_pt, skills_re_pt),
+    ("ingles/EN-CSharp-Backend-Luis-Otavio", "en", "C# Backend Developer", sum_cs_en, proj_cs_en, skills_cs_en),
+    ("ingles/EN-Data-Developer-Luis-Otavio", "en", "Data Developer", sum_data_en, proj_data_en, skills_data_en),
+    ("ingles/EN-Flutter-Mobile-Luis-Otavio", "en", "Mobile Developer", sum_fl_en, proj_fl_en, skills_fl_en),
+    ("ingles/EN-FullStack-Luis-Otavio", "en", "Full-Stack Developer", sum_fs_en, proj_fs_en, skills_fs_en),
+    ("ingles/EN-Java-Backend-Luis-Otavio", "en", "Java Backend Developer", sum_java_en, proj_java_en, skills_java_en),
+    ("ingles/EN-Python-Backend-Luis-Otavio", "en", "Python Backend Developer", sum_py_en, proj_py_en, skills_py_en),
+    ("ingles/EN-React-Frontend-Luis-Otavio", "en", "React Frontend Developer", sum_re_en, proj_re_en, skills_re_en),
 ]
 
 if __name__ == "__main__":

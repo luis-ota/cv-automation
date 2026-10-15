@@ -20,18 +20,20 @@ coluna única, texto real, seções padrão e sem nomes de fornecedores.
 ```
 output/
 ├── latex/
-│   ├── CV-Luis-Otavio-PT.pdf       # currículo geral (português, 2 páginas)
-│   ├── CV-Luis-Otavio-EN.pdf       # general CV (inglês, 2 páginas)
-│   └── CV-Luis-Otavio-Rust-EN.pdf  # foco Rust / sistemas (inglês)
+│   ├── PT-Luis-Otavio.pdf          # currículo geral (português, 2 páginas)
+│   ├── EN-Luis-Otavio.pdf          # general CV (inglês, 2 páginas)
+│   └── EN-Rust-Luis-Otavio.pdf     # foco Rust / sistemas (inglês)
 ├── ptbr/                           # 7 currículos por vaga (PT-BR)
-│   ├── curriculo_Luis_Otavio_FullStack.docx + .pdf
-│   ├── curriculo_Luis_Otavio_Python_Backend.docx + .pdf
-│   ├── curriculo_Luis_Otavio_CSharp_Backend.docx + .pdf
-│   ├── curriculo_Luis_Otavio_Data_Developer.docx + .pdf
-│   ├── curriculo_Luis_Otavio_Flutter_Mobile.docx + .pdf
-│   ├── curriculo_Luis_Otavio_Java_Backend.docx + .pdf
-│   └── curriculo_Luis_Otavio_React_Frontend.docx + .pdf
+│   ├── PT-FullStack-Luis-Otavio.docx + .pdf
+│   ├── PT-Python-Backend-Luis-Otavio.docx + .pdf
+│   ├── PT-CSharp-Backend-Luis-Otavio.docx + .pdf
+│   ├── PT-Data-Developer-Luis-Otavio.docx + .pdf
+│   ├── PT-Flutter-Mobile-Luis-Otavio.docx + .pdf
+│   ├── PT-Java-Backend-Luis-Otavio.docx + .pdf
+│   └── PT-React-Frontend-Luis-Otavio.docx + .pdf
 └── ingles/                         # os mesmos 7 papéis em inglês
+    ├── EN-FullStack-Luis-Otavio.docx + .pdf
+    └── ...
 ```
 
 ## Quick start

@@ -7,8 +7,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from gen_docx_base import *
 
 GH = "https://github.com/luis-ota/"
-ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "output"
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / "output" / "docx"
 
 # =============================================================================
 # 1) C# BACKEND
@@ -430,25 +430,26 @@ skills_re_en = [
 # Geração
 # =============================================================================
 JOBS = [
-    ("ptbr/PT-CSharp-Backend-Luis-Otavio", "pt", "Desenvolvedor Backend C#", sum_cs_pt, proj_cs_pt, skills_cs_pt),
-    ("ptbr/PT-Data-Developer-Luis-Otavio", "pt", "Desenvolvedor de Dados", sum_data_pt, proj_data_pt, skills_data_pt),
-    ("ptbr/PT-Flutter-Mobile-Luis-Otavio", "pt", "Desenvolvedor Mobile", sum_fl_pt, proj_fl_pt, skills_fl_pt),
-    ("ptbr/PT-FullStack-Luis-Otavio", "pt", "Desenvolvedor Full Stack", sum_fs_pt, proj_fs_pt, skills_fs_pt),
-    ("ptbr/PT-Java-Backend-Luis-Otavio", "pt", "Desenvolvedor Backend Java", sum_java_pt, proj_java_pt, skills_java_pt),
-    ("ptbr/PT-Python-Backend-Luis-Otavio", "pt", "Desenvolvedor Backend Python", sum_py_pt, proj_py_pt, skills_py_pt),
-    ("ptbr/PT-React-Frontend-Luis-Otavio", "pt", "Desenvolvedor Frontend React", sum_re_pt, proj_re_pt, skills_re_pt),
-    ("ingles/EN-CSharp-Backend-Luis-Otavio", "en", "C# Backend Developer", sum_cs_en, proj_cs_en, skills_cs_en),
-    ("ingles/EN-Data-Developer-Luis-Otavio", "en", "Data Developer", sum_data_en, proj_data_en, skills_data_en),
-    ("ingles/EN-Flutter-Mobile-Luis-Otavio", "en", "Mobile Developer", sum_fl_en, proj_fl_en, skills_fl_en),
-    ("ingles/EN-FullStack-Luis-Otavio", "en", "Full-Stack Developer", sum_fs_en, proj_fs_en, skills_fs_en),
-    ("ingles/EN-Java-Backend-Luis-Otavio", "en", "Java Backend Developer", sum_java_en, proj_java_en, skills_java_en),
-    ("ingles/EN-Python-Backend-Luis-Otavio", "en", "Python Backend Developer", sum_py_en, proj_py_en, skills_py_en),
-    ("ingles/EN-React-Frontend-Luis-Otavio", "en", "React Frontend Developer", sum_re_en, proj_re_en, skills_re_en),
+    ("pt-BR/PT-CSharp-Backend-Luis-Otavio", "pt", "Desenvolvedor Backend C#", sum_cs_pt, proj_cs_pt, skills_cs_pt),
+    ("pt-BR/PT-Data-Developer-Luis-Otavio", "pt", "Desenvolvedor de Dados", sum_data_pt, proj_data_pt, skills_data_pt),
+    ("pt-BR/PT-Flutter-Mobile-Luis-Otavio", "pt", "Desenvolvedor Mobile", sum_fl_pt, proj_fl_pt, skills_fl_pt),
+    ("pt-BR/PT-FullStack-Luis-Otavio", "pt", "Desenvolvedor Full Stack", sum_fs_pt, proj_fs_pt, skills_fs_pt),
+    ("pt-BR/PT-Java-Backend-Luis-Otavio", "pt", "Desenvolvedor Backend Java", sum_java_pt, proj_java_pt, skills_java_pt),
+    ("pt-BR/PT-Python-Backend-Luis-Otavio", "pt", "Desenvolvedor Backend Python", sum_py_pt, proj_py_pt, skills_py_pt),
+    ("pt-BR/PT-React-Frontend-Luis-Otavio", "pt", "Desenvolvedor Frontend React", sum_re_pt, proj_re_pt, skills_re_pt),
+    ("en/EN-CSharp-Backend-Luis-Otavio", "en", "C# Backend Developer", sum_cs_en, proj_cs_en, skills_cs_en),
+    ("en/EN-Data-Developer-Luis-Otavio", "en", "Data Developer", sum_data_en, proj_data_en, skills_data_en),
+    ("en/EN-Flutter-Mobile-Luis-Otavio", "en", "Mobile Developer", sum_fl_en, proj_fl_en, skills_fl_en),
+    ("en/EN-FullStack-Luis-Otavio", "en", "Full-Stack Developer", sum_fs_en, proj_fs_en, skills_fs_en),
+    ("en/EN-Java-Backend-Luis-Otavio", "en", "Java Backend Developer", sum_java_en, proj_java_en, skills_java_en),
+    ("en/EN-Python-Backend-Luis-Otavio", "en", "Python Backend Developer", sum_py_en, proj_py_en, skills_py_en),
+    ("en/EN-React-Frontend-Luis-Otavio", "en", "React Frontend Developer", sum_re_en, proj_re_en, skills_re_en),
 ]
 
 if __name__ == "__main__":
     for name, lang, headline, summary, projects, skills in JOBS:
         path = str(OUT / f"{name}.docx")
+        Path(path).parent.mkdir(parents=True, exist_ok=True)
         exps = EXP_PT if lang == "pt" else EXP_EN
         edu = EDU_PT if lang == "pt" else EDU_EN
         langs = LANG_PT if lang == "pt" else LANG_EN

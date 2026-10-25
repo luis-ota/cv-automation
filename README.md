@@ -19,21 +19,13 @@ no vendor names.
 
 ```
 output/
-├── latex/
-│   ├── PT-Luis-Otavio.pdf          # general CV (Portuguese, 2 pages)
-│   ├── EN-Luis-Otavio.pdf          # general CV (English, 2 pages)
-│   └── EN-Rust-Luis-Otavio.pdf     # Rust / systems focused (English)
-├── ptbr/                           # 7 role-specific resumes (PT-BR)
-│   ├── PT-FullStack-Luis-Otavio.docx + .pdf
-│   ├── PT-Python-Backend-Luis-Otavio.docx + .pdf
-│   ├── PT-CSharp-Backend-Luis-Otavio.docx + .pdf
-│   ├── PT-Data-Developer-Luis-Otavio.docx + .pdf
-│   ├── PT-Flutter-Mobile-Luis-Otavio.docx + .pdf
-│   ├── PT-Java-Backend-Luis-Otavio.docx + .pdf
-│   └── PT-React-Frontend-Luis-Otavio.docx + .pdf
-└── ingles/                         # same 7 roles in English
-    ├── EN-FullStack-Luis-Otavio.docx + .pdf
-    └── ...
+├── docx/
+│   ├── pt-BR/                      # 7 role-specific resumes (.docx)
+│   └── en/                         # same 7 roles in English (.docx)
+├── pdf/
+│   ├── pt-BR/                      # PDFs converted from .docx
+│   └── en/
+└── latex/                          # 3 general PDFs (PT, EN and EN-Rust)
 ```
 
 ## Quick start
@@ -41,9 +33,9 @@ output/
 ```sh
 # requirements: uv, tectonic, (optional) libreoffice
 make all      # docx + latex + pdf + ATS check
-make docx     # 14 role-specific .docx  (output/ptbr, output/ingles)
+make docx     # 14 role-specific .docx (output/docx/pt-BR, output/docx/en)
 make latex    # 3 LaTeX PDFs            (output/latex)
-make pdf      # convert .docx -> .pdf   (needs LibreOffice)
+make pdf      # convert .docx -> .pdf (output/pdf/)
 make check    # ATS verification of every generated PDF
 make clean
 ```
@@ -63,14 +55,14 @@ virtualenv to create and no `requirements.txt` to maintain.
 
 ## How it works
 
-- **`latex/`** — one shared `cv-preamble.tex` (Arial via `fontspec`, single
+- **`src/latex/`** — one shared `cv-preamble.tex` (Arial via `fontspec`, single
   column, hyphenation disabled so words are never split) plus one `.tex` per CV.
   Compiled with Tectonic (self-contained XeTeX).
-- **`docx/`** — `gen_docx_base.py` holds the styling helpers and the shared
+- **`src/docx/`** — `gen_docx_base.py` holds the styling helpers and the shared
   content blocks (experience, education, languages); `gen_all.py` declares the
   per-role content (summary, project picks, skill groups) and renders the 14
   files with [python-docx](https://python-docx.readthedocs.io).
-- **`tools/check_ats.py`** — extracts text from every generated PDF and asserts:
+- **`src/tools/check_ats.py`** — extracts text from every generated PDF and asserts:
   standard section headings, contact info in the body, no corrupted glyphs,
   consistent dates, expected keywords. Output: one line per file, `OK` or the
   list of problems.
@@ -93,9 +85,9 @@ Based on current ATS guidance for 2026:
 
 The content is data, not code: fork the repo, then
 
-1. edit the per-role content in `docx/gen_all.py` (summaries, projects, skills)
-   and the shared blocks in `docx/gen_docx_base.py`;
-2. edit or replace the `.tex` files in `latex/`;
+1. edit the per-role content in `src/docx/gen_all.py` (summaries, projects, skills)
+   and the shared blocks in `src/docx/gen_docx_base.py`;
+2. edit or replace the `.tex` files in `src/latex/`;
 3. run `make all` and check the report at the end.
 
 Every claim in the output should map to something verifiable — mine map to

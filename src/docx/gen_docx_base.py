@@ -163,6 +163,8 @@ def header(doc, headline, lang="pt"):
                        ("  ", 9, False, False, None),
                        ("github.com/luis-ota", 9, False, False, "https://github.com/luis-ota"),
                        ("  ", 9, False, False, None),
+                       ("portfolio.wired.rs", 9, False, False, "https://portfolio.wired.rs"),
+                       ("  ", 9, False, False, None),
                        ("wired.rs", 9, False, False, "https://wired.rs")], after=1)
     else:
         run_para(doc, [("Rebouças, Curitiba, Paraná, Brazil  ", 9, False, False, None),
@@ -171,6 +173,8 @@ def header(doc, headline, lang="pt"):
         run_para(doc, [("linkedin.com/in/luis-ota", 9, False, False, "https://linkedin.com/in/luis-ota"),
                        ("  ", 9, False, False, None),
                        ("github.com/luis-ota", 9, False, False, "https://github.com/luis-ota"),
+                       ("  ", 9, False, False, None),
+                       ("portfolio.wired.rs", 9, False, False, "https://portfolio.wired.rs"),
                        ("  ", 9, False, False, None),
                        ("wired.rs", 9, False, False, "https://wired.rs")], after=1)
     if headline:
@@ -244,12 +248,16 @@ LANG_EN = "Portuguese (native)  |  English (intermediate, B2)  |  German (basic)
 COURSES_PT = [
     "Arquiteto de Software (PUCPR)", "Analista de Sistemas (PUCPR)",
     "Analista de Requisitos (PUCPR)", "Desenvolvedor WEB (PUCPR)",
+    "Introdução à Cibersegurança (Cisco Networking Academy, 2024)",
+    "Endpoint Security (Cisco Networking Academy, 2024)",
     "Curso Completo de Python 3: do Iniciante ao Avançado (Udemy, 2021)",
     "Operador e Manutenção de Computadores (SPAE, 2019)",
 ]
 COURSES_EN = [
     "Software Architect (PUCPR)", "Systems Analyst (PUCPR)",
     "Requirements Analyst (PUCPR)", "Web Developer (PUCPR)",
+    "Introduction to Cybersecurity (Cisco Networking Academy, 2024)",
+    "Endpoint Security (Cisco Networking Academy, 2024)",
     "The Complete Python 3 Course: Beginner to Advanced (Udemy, 2021)",
     "Computer Operator and Maintenance (SPAE, 2019)",
 ]

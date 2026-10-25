@@ -74,11 +74,11 @@ def check_pdf(path: Path):
 
 
 def main():
-    root = Path(__file__).resolve().parent.parent
+    root = Path(__file__).resolve().parents[2]
     roots = [Path(p) for p in sys.argv[1:]] or [
         root / "output" / "latex",
-        root / "output" / "ptbr",
-        root / "output" / "ingles",
+        root / "output" / "pdf" / "pt-BR",
+        root / "output" / "pdf" / "en",
     ]
     pdfs = []
     for r in roots:
@@ -94,7 +94,7 @@ def main():
     for pdf in pdfs:
         problems, warnings, pages = check_pdf(pdf)
         try:
-            name = str(pdf.relative_to(Path(__file__).resolve().parent.parent))
+            name = str(pdf.relative_to(Path(__file__).resolve().parents[2]))
         except ValueError:
             name = str(pdf)
         if problems:

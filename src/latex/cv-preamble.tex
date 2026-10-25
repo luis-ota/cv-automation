@@ -23,6 +23,8 @@
 \hyphenpenalty=10000
 \exhyphenpenalty=10000
 \sloppy
+% Alinhado à esquerda: sem hifenização, o justificado abre "rios" de espaço.
+\AtBeginDocument{\raggedright}
 
 \definecolor{linknavy}{HTML}{14406B}
 
@@ -57,10 +59,10 @@
   \setlength{\parskip}{0pt}%
   \vspace{6pt}%
   {\normalsize\bfseries\MakeUppercase{#1}}\par
-  \vspace{1.5pt}%
-  \noindent\rule{\textwidth}{0.8pt}\par
-  \endgroup
   \vspace{2pt}%
+  \hrule height 0.8pt
+  \endgroup
+  \vspace{4pt}%
 }
 
 % ---- Experiência / formação: empregador, local, cargo, período ----

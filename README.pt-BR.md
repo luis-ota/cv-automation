@@ -19,21 +19,13 @@ coluna única, texto real, seções padrão e sem nomes de fornecedores.
 
 ```
 output/
-├── latex/
-│   ├── PT-Luis-Otavio.pdf          # currículo geral (português, 2 páginas)
-│   ├── EN-Luis-Otavio.pdf          # general CV (inglês, 2 páginas)
-│   └── EN-Rust-Luis-Otavio.pdf     # foco Rust / sistemas (inglês)
-├── ptbr/                           # 7 currículos por vaga (PT-BR)
-│   ├── PT-FullStack-Luis-Otavio.docx + .pdf
-│   ├── PT-Python-Backend-Luis-Otavio.docx + .pdf
-│   ├── PT-CSharp-Backend-Luis-Otavio.docx + .pdf
-│   ├── PT-Data-Developer-Luis-Otavio.docx + .pdf
-│   ├── PT-Flutter-Mobile-Luis-Otavio.docx + .pdf
-│   ├── PT-Java-Backend-Luis-Otavio.docx + .pdf
-│   └── PT-React-Frontend-Luis-Otavio.docx + .pdf
-└── ingles/                         # os mesmos 7 papéis em inglês
-    ├── EN-FullStack-Luis-Otavio.docx + .pdf
-    └── ...
+├── docx/
+│   ├── pt-BR/                      # 7 currículos por vaga (.docx)
+│   └── en/                         # os mesmos 7 papéis em inglês (.docx)
+├── pdf/
+│   ├── pt-BR/                      # PDFs convertidos dos .docx
+│   └── en/
+└── latex/                          # 3 PDFs gerais (PT, EN e EN-Rust)
 ```
 
 ## Quick start
@@ -41,9 +33,9 @@ output/
 ```sh
 # requisitos: uv, tectonic e (opcional) libreoffice
 make all      # docx + latex + pdf + verificação ATS
-make docx     # 14 currículos específicos .docx  (output/ptbr, output/ingles)
+make docx     # 14 currículos .docx (output/docx/pt-BR, output/docx/en)
 make latex    # 3 PDFs LaTeX                     (output/latex)
-make pdf      # converte .docx -> .pdf           (requer LibreOffice)
+make pdf      # converte .docx -> .pdf (output/pdf/)
 make check    # verificação ATS de todos os PDFs gerados
 make clean
 ```
@@ -63,14 +55,14 @@ virtualenv para criar e sem `requirements.txt` para manter.
 
 ## Como funciona
 
-- **`latex/`** — um `cv-preamble.tex` compartilhado (Arial via `fontspec`, coluna
+- **`src/latex/`** — um `cv-preamble.tex` compartilhado (Arial via `fontspec`, coluna
   única, hifenização desativada para nunca quebrar palavras) + um `.tex` por CV.
   Compilado com Tectonic (XeTeX autocontido).
-- **`docx/`** — `gen_docx_base.py` concentra os helpers de formatação e os blocos
+- **`src/docx/`** — `gen_docx_base.py` concentra os helpers de formatação e os blocos
   comuns (experiência, formação, idiomas); `gen_all.py` declara o conteúdo por
   vaga (resumo, projetos, habilidades) e renderiza os 14 arquivos com
   [python-docx](https://python-docx.readthedocs.io).
-- **`tools/check_ats.py`** — extrai o texto de cada PDF gerado e verifica: seções
+- **`src/tools/check_ats.py`** — extrai o texto de cada PDF gerado e verifica: seções
   padrão, contato no corpo, sem caracteres corrompidos, datas consistentes e
   palavras-chave esperadas. Saída: uma linha por arquivo, `OK` ou a lista de
   problemas.
@@ -93,9 +85,9 @@ Com base nas orientações de ATS vigentes para 2026:
 
 O conteúdo é dado, não código: faça fork e então
 
-1. edite o conteúdo por vaga em `docx/gen_all.py` (resumos, projetos,
-   habilidades) e os blocos comuns em `docx/gen_docx_base.py`;
-2. edite ou substitua os arquivos `.tex` em `latex/`;
+1. edite o conteúdo por vaga em `src/docx/gen_all.py` (resumos, projetos,
+   habilidades) e os blocos comuns em `src/docx/gen_docx_base.py`;
+2. edite ou substitua os arquivos `.tex` em `src/latex/`;
 3. rode `make all` e confira o relatório no final.
 
 Toda afirmação no resultado deve ser verificável — as minhas apontam para
